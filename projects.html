@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Campus Connect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">C</span><span>Campus Connect</span></a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav"><a href="index.html">Home</a><a href="information.html">Information</a><a href="ask-seniors.html">Ask Seniors</a><a href="seniors.html">Senior Directory</a><a class="active" href="projects.html">Projects</a><a class="nav-login" href="login.html">Log in</a><a class="nav-cta" href="register.html">Join the community</a></nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-heading">
+      <p class="eyebrow">STUDENT SHOWCASE</p><h1>Ideas become projects.</h1>
+      <p class="page-subtitle">Explore what students are building, get inspired and find opportunities to collaborate.</p>
+    </section>
+
+    <section class="project-intro"><div><span class="pill pill-blue">BUILT BY STUDENTS</span><h2>Discover projects across campus.</h2><p>A shared space to showcase ideas, learn from peers and connect with people who enjoy building things.</p></div><a class="button button-primary" href="#project-form">＋ Share your project</a></section>
+
+    <div class="section-title-row project-heading"><div><p class="eyebrow">THE COMMUNITY PORTFOLIO</p><h2>Featured projects</h2></div><label class="field compact-field"><span class="sr-only">Filter projects</span><select id="projectCategory"><option value="all">All categories</option><option value="web">Web development</option><option value="ai">AI & technology</option><option value="design">Design</option><option value="social">Social impact</option></select></label></div>
+
+    <section class="card-grid three-col" id="projectGrid" aria-live="polite">
+      <p class="empty-state" id="emptyProjects">Loading student projects…</p>
+    </section>
+    <section class="project-submit" id="project-form">
+      <div><p class="eyebrow">HAVE AN IDEA?</p><h2>Share your project.</h2><p>Show the community what you are building and invite others to connect.</p></div>
+      <form class="community-form" id="projectForm">
+        <label class="field"><span>Project title</span><input id="projectTitle" maxlength="120" required></label>
+        <label class="field"><span>Description</span><textarea id="projectDescription" maxlength="2000" rows="4" required></textarea></label>
+        <label class="field"><span>Category</span><select id="newProjectCategory" required><option value="web">Web development</option><option value="ai">AI &amp; technology</option><option value="design">Design</option><option value="social">Social impact</option></select></label>
+        <label class="field"><span>Project link (optional)</span><input id="projectUrl" type="url" placeholder="https://"></label>
+        <button class="button button-primary" type="submit">Publish project <span>→</span></button>
+        <p class="form-message" id="projectMessage" role="status"></p>
+      </form>
+    </section>
+    <section class="bottom-cta"><div><p class="eyebrow">KEEP BUILDING</p><h2>Learning is better together.</h2><p>Share what you make and inspire someone else to start building.</p></div><a class="button button-light" href="register.html">Join the community <span>→</span></a></section>
+  </main>
+  <footer class="site-footer"><span>© 2026 Campus Connect</span><span>Learn together. Grow together.</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>

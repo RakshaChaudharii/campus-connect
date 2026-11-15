@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meet senior students and find a mentor in the Campus Connect directory.">
+  <title>Senior Directory | Campus Connect</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="brand"><span class="brand-mark">CC</span>Campus Connect</a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="information.html">Information</a>
+      <a href="ask-seniors.html">Ask Seniors</a>
+      <a href="seniors.html" class="active" aria-current="page">Senior Directory</a>
+      <a href="projects.html">Projects</a>
+      <a href="login.html" class="nav-cta">Login</a>
+      <a href="register.html" class="nav-cta">Join the community</a>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-heading">
+      <p class="eyebrow">LEARN FROM EXPERIENCE</p>
+      <h1>Find your people.</h1>
+      <p class="page-subtitle">Meet senior students who can share what they’ve learned, help you explore a field, or point you toward your next opportunity.</p>
+    </section>
+
+    <section class="directory-intro" aria-label="About the senior directory">
+      <div>
+        <p class="eyebrow">CAMPUS CONNECT MENTORS</p>
+        <h2>A little guidance goes a long way.</h2>
+        <p>Browse senior students who are ready to share their experience and help you find your next step.</p>
+      </div>
+      <div class="directory-count"><strong id="seniorCount">0</strong>senior mentors</div>
+    </section>
+
+    <section class="filter-panel senior-filters" aria-label="Filter senior profiles">
+      <label class="field search-field">
+        <span>Search profiles</span>
+        <input id="seniorSearch" type="search" placeholder="Name, skill, or topic">
+      </label>
+      <label class="field">
+        <span>Department</span>
+        <select id="seniorDepartment">
+          <option value="all">All departments</option>
+          <option value="cse">Computer Science</option>
+          <option value="ise">Information Science</option>
+          <option value="ece">Electronics &amp; Communication</option>
+          <option value="me">Mechanical Engineering</option>
+          <option value="eee">Electrical &amp; Electronics</option>
+        </select>
+      </label>
+      <label class="field">
+        <span>Mentoring topic</span>
+        <select id="seniorTopic">
+          <option value="all">All topics</option>
+          <option value="software">Software &amp; coding</option>
+          <option value="data">AI &amp; data</option>
+          <option value="design">Design &amp; product</option>
+          <option value="career">Internships &amp; careers</option>
+        </select>
+      </label>
+    </section>
+
+    <p class="senior-results" id="seniorResultCount" aria-live="polite">Loading senior profiles…</p>
+    <section class="senior-grid" aria-label="Senior student profiles" id="seniorGrid">
+      <p class="empty-state">Loading senior profiles…</p>
+    </section>
+
+    <section class="bottom-cta directory-cta">
+      <div>
+        <p class="eyebrow">START A CONVERSATION</p>
+        <h2>Have something you want to ask?</h2>
+        <p>Post a question for the student community to discuss.</p>
+      </div>
+      <a href="ask-seniors.html#ask-form" class="button button-light">Ask the community →</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>Campus Connect · Students Helping Students</span>
+    <span>Senior profiles are shared by registered students.</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
